@@ -1,0 +1,14 @@
+<%- include('partials/header') -%>
+
+<h1 class="logoName text-center">Update Inventory</h1>
+<div class="container border border-primary rounded">
+    <form action="/update" method="post">
+        <label for="itemSlug">Item Slug</label>
+        <input type="text" name="itemSlug" id="itemSlug" >
+        <label for="itemQty">Quantity</label>
+        <input type="number" name="itemQty" id="itemQty">
+        <label for="itemPrice">Price($)</label>
+        <input type="number" name="itemPrice" id="itemPrice">
+        <button type="submit" class="btn btn-sm btn-dark">Update</button>
+    </form>
+</div>

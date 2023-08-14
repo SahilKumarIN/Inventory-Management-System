@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Baloo+Bhai+2&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: 'Baloo Bhai 2', cursive;  
+}
+
+::selection{
+    color: rgb(132, 0, 255);
+    background: transparent;
+}
+
+nav{
+    padding: 10px;
+    top: 0;
+    position: sticky;
+    background: transparent;
+    backdrop-filter: blur(3px);
+}
+
+.NavBar{
+    width: 100%;
+    /* height: 40px; */
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid blue;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 2px rgb(16, 153, 187);
+    /* box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 ); */
+    background-color: rgb(63, 116, 202);
+    color: white;
+    cursor: pointer;
+   
+}
+
+.logoName{
+    font-size: 1.8rem;
+    font-family: 'Acme', sans-serif;
+    font-weight: 900;
+    margin: 2px ;
+    text-shadow: 1px 4px 4px hotpink;
+}
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.options li{
+    padding: 0 6px;
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 10px;
+}
+.options li:hover{
+    /* color: hotpink; */
+    scale: 1.1;
+}
+
+.options li a{
+    color: white;
+    text-decoration: none;
+}
+
+.options li a:hover{
+    color: hotpink;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+
+form{
+    padding: 6px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    /* margin: auto; */
+}
+
+form input{
+    width: 90%;
+    padding: 4px;
+    margin: 4px;
+}
+
+
+
+form label{
+    font-size: 1.1rem;
+    font-weight: 900;
+    margin: 4px;
+}
+
+form button{
+    margin: 4px;
+}

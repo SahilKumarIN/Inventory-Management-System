@@ -1,0 +1,41 @@
+<%- include('partials/header') -%>
+<h1 class="logoName text-center"><%= UserData.businessName %> - Inventory</h1>
+
+<!-- Table for showing the inventory -->
+<% if(UserData.items.length != 0) { %>
+<div class="container">
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Item-Slug</th>
+        <th scope="col">Qty.</th>
+        <th scope="col">Price($)</th>
+        <!-- <th scope="col">Update</th> -->
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <% for(var i =0 ; i<UserData.items.length ; i++){ %>
+        <form action="/delete" method="post">
+      <tr>
+        <th scope="row"><%= i+1 %></th>
+        <td><%= UserData.items[i].itemSlug %></td>
+        <td><%= UserData.items[i].itemQty %></td>
+        <td><%= UserData.items[i].itemPrice %></td>
+        <!-- <td><a style="text-decoration: none; color: white;" href="/update"><button type="button" name="updateBtn" class="btn btn-sm btn-dark" value="<%= UserData.items[i]._id %>" >Update</button></a></td> -->
+        <td><button type="submit" name="delBtn" class="btn btn-sm btn-dark" value="<%= UserData.items[i]._id %>">Delete</button></td>
+      </tr>
+    </form>
+      <% } %>
+      
+      
+    </tbody>
+  </table>
+</div>
+<% } else {%>
+  <div class="container"><h1 class="logoName text-center" style="color: red; ">No Data Found !!!</h1></div>
+  <% } %>
+
+<%- include('partials/footer') -%>

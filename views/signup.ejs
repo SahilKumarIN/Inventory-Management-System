@@ -1,0 +1,23 @@
+<%- include('partials/header') -%>
+
+<h1 class="logoName text-center">SignUp</h1>
+
+<div class="container border border-primary rounded">
+<form action="/signup" method="post">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" required>
+    <label for="businessName">Business Name </label>
+    <input type="text" name="businessName" id="businessName" required>
+    <label for="email">E-mail</label>
+    <input type="email" name="email" id="email" required>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+    <label >Already have an account?<a href="/login">Login Here</a></label>
+    <button type="submit" class="btn btn-sm btn-primary">SignUp</button>
+
+
+</form>
+</div>
+
+
+<%- include('partials/footer') -%>

@@ -1,0 +1,19 @@
+<%- include('partials/header') -%>
+
+<h1 class="logoName text-center">Add Inventory</h1>
+<div class="container border border-primary rounded">
+<form action="/add-inventory" method="post">
+    <label for="itemslug">Item Slug</label>
+    <input type="text" name="itemslug" id="item-slug">
+    <label for="itemqty">Quantity</label>
+    <input type="number" name="itemqty" id="item-qty">
+    <label for="itemprice">Price ($) </label>
+    <input type="number" name="itemprice" id="item-price">
+    <button type="submit" class="btn btn-sm btn-dark">Add Item</button>
+</form>
+</div>
+
+
+
+
+<%- include('partials/footer') -%>

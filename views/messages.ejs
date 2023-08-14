@@ -1,0 +1,27 @@
+<%- include('partials/header') -%>
+
+<div class="container">
+    <h1 class="logoName text-center">Messages</h1>
+    <% let flag = 0 %>
+    <% for(var i = 0 ; i < foundMessage.length ; i++ ) { %>
+        <form action="/deleteMsg" method="post">
+    <div class="container border border-primary rounded p-3 m-3">
+        
+        <h5><strong style="color: brown; font-size: 1.5rem; font-family: 'Acme' , 'sans-serif';"><%= foundMessage[i].userName %></strong></h5>
+        <h5><strong style="color: gray; font-size: 0.9rem;"><%= foundMessage[i].userEmail %></strong></h5>
+        <p><strong>Message : </strong><%= foundMessage[i].userMessage %></p>
+
+        <button type="submit" class="btn btn-sm btn-dark" name="delMsg" value="<%= foundMessage[i]._id %>">Delete</button>
+    </div>
+</form>
+    <% flag += 1 %>
+    <% } %>
+    <% if(flag === 0){ %>
+        <div class="container">
+            <h1 class="logoName text-center" style="color: red;">No Messages found !!!</h1>
+        </div>
+     <% } %>  
+</div>
+
+
+<%- include('partials/footer') -%>
