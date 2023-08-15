@@ -12,6 +12,11 @@
     background: transparent;
 }
 
+.hiddencross{
+    display: none;
+}
+
+
 nav{
     padding: 10px;
     top: 0;
@@ -20,9 +25,13 @@ nav{
     backdrop-filter: blur(3px);
 }
 
+.h-nav{
+    height: 75px;
+}
+
 .NavBar{
     width: 100%;
-    /* height: 40px; */
+    /* height: 75px; */
     display: flex;
     padding: 10px;
     align-items: center;
@@ -44,11 +53,47 @@ nav{
     margin: 2px ;
     text-shadow: 1px 4px 4px hotpink;
 }
+
+.hamburger{
+    display: none;
+    /* margin: 0px calc(100% - 80%); */
+}
+
+.line{
+    height: 3px;
+    margin: 2px 0;
+    border-radius: 20px;
+    background: white;
+}
+
+.line1{
+    width: 20px;
+}
+
+.line2{
+    width: 16px;
+}
+
+.line3{
+    width: 22px;
+}
+
+.logoOpt{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* width: 80%; */
+}
+
+
+
 .options{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
+    height: max-content;
+    /* transition: 2s ease-in-out; */
 }
 
 .options li{
@@ -103,4 +148,64 @@ form label{
 
 form button{
     margin: 4px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1150px){
+
+    .logoOpt{
+        width: 80%;
+    }
+    .hidden{
+        display: none !important;
+        /* transition: 5s ease-in-out ; */
+    }
+    .NavBar{
+        flex-direction:column;
+        /* transition: all 5s ease-out; */
+    }
+
+    .logoName{
+       font-size: 1.5rem;
+       margin-bottom: 4px;
+    }
+
+    .options{
+        height: max-content;
+        
+
+    }
+
+    .options li{
+        font-size: 0.9rem;
+        padding: 0 3px;
+        margin: 0 5px;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    form label{
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .options{
+        flex-direction: column;
+
+    }
+
+    .logoName{
+        font-size: 1.4rem;
+    }
+
+    .options li{
+        /* padding: 3px 0; */
+        margin: 5px 0;
+        font-size: 0.8rem;
+    }
+
+    
 }

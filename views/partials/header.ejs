@@ -11,9 +11,18 @@
 <body>
 
     <nav>
-        <div class="NavBar">
-            <h1 class="logoName">Inventory Management System</h1>
-            <ul class="options">
+        <div class="NavBar" id="NavBar">
+            <div class="logoOpt">
+                <h1 class="logoName">Inventory Management System</h1>
+                <div class="hamburger " id="hamburger">
+                    <!-- <button class="btn btn-sm btn-danger">hello</button> -->
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+                <div class="cross hiddencross" id="cross">&#10060;</div>
+            </div>
+            <ul class="options hidden" id="options">
                 <li><a href="/">🏠Home</a></li>
                 <li><a href="/add-inventory"><img width="24px" src="Assets/add-to-cart.png" alt="Inventory"> Add Inventory</a></li>
                 <li><a href="/"><img width="24px" src="Assets/shopping-cart.png" alt="Inventory"> Inventory</a></li>
